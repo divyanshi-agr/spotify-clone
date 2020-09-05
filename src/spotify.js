@@ -19,6 +19,24 @@ const scopes = [
   "user-modify-playback-state",
 ];
 
-export const loginUrl = `${authEndpoint}?client_id={clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+//extracting the access token( returned after authorization) from the redirected url
+
+export const getTokenFromUrl = () => {
+  return window.location.hash //window.location.hash goes to the hashtag wala point in the url
+    .substring(1)
+    .split("&") //split at the &
+    .reduce((initial, item) => {
+      // #accessToken=mysecretkey&name=diva&nadnam --> eg url
+      let parts = item.split("="); //split at the '=' sign
+      initial[parts[0]] = decodeURIComponent(parts[1]);
+
+      return initial;
+    }, {});
+};
+
+//%20 is ascii for space character
+//scopes.join joins all scopes items with a space character
+//response_type=token --> returns a token once user is authenticated
+export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
   "%20"
 )}&response_type=token&show_dialog=true`;
