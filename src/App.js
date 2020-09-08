@@ -35,7 +35,7 @@ function App() {
     console.log("I have a token", _token);
   }, []);
 
-  // return <div className="app">{token ? <Player /> : <Login />}</div>;
+  return <div className="app">{token ? <Player /> : <Login />}</div>;
 }
 
 export default App;
