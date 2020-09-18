@@ -15,11 +15,11 @@ function Footer() {
       <div className="footer-left">
         <img
           className="footer-albumLogo"
-          src="https://upload.wikimedia.org/wikipedia/en/3/38/Tiesto_-_A_Town_Called_Paradise.jpg"
+          src="https://m.media-amazon.com/images/I/812sO6JBAJL._SS500_.jpg"
         />
         <div className="footer-songInfo">
-          <h4>Town called paradise</h4>
-          <p>Tiesto</p>
+          <h4>Sunset Lover</h4>
+          <p>Petit</p>
         </div>
       </div>
 
