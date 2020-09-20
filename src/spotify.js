@@ -11,9 +11,9 @@ const clientId = "a56e3c8d73534c999985a8c2f851c46d";
 
 //defining scope of what we can do in our clone, eg we cant delete any song but
 //we can just play it on spotify etc
-// const scopes = [
-//   "user-read-currently-playing",
-//   "user-read-recently-played",
+const scopes = [
+  "user-read-currently-playing",
+  "user-read-recently-played",
   "user-read-playback-state",
   "user-top-read",
   "user-modify-playback-state",
